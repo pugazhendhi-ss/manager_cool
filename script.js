@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const authSection = document.getElementById('auth-section');
     const passwordInput = document.getElementById('password-input');
     const loginButton = document.getElementById('login-button');
+    const nameString = document.getElementById('nameString');
+    const nameString2 = document.getElementById('nameString2');
     const giftCardSection = document.getElementById('gift-card-section');
     const giftCodeContainer = document.getElementById('gift-code-container');
     const giftCodeEl = document.getElementById('gift-code');
@@ -91,7 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
             passwordArrows.forEach(arrow => {
                 arrow.style.display = 'none';
             });
-
+            nameString.style.display = 'none';
+            nameString2.style.display = 'none';
             // Transition to photo page
             authSection.style.transition = 'opacity 0.8s';
             authSection.style.opacity = '0';

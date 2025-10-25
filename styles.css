@@ -561,3 +561,16 @@ body {
     font-size: clamp(0.8rem, 2.5vw, 0.95rem);
     margin-bottom: 0.5rem;
 }
+.by{
+  text-align:start;
+  margin-left:30px;
+  font-family: var(--heading-font);
+  font-size: 22px;
+}
+.name{
+text-align:start;
+  margin-left:40px;
+  font-family: var(--heading-font);
+  font-size: 22px;
+  margin-bottom:20px;
+}
