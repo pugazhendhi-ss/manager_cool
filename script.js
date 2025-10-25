@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- PLACEHOLDERS ---
     // Replace these with the output from generate_hashes.py
     const APPPWD = "9f5506a40f5d328f27cf4f75a25f596cd7e3d683d60448fca33c79123a96925d";
-    const APAYGC = "Nk40Ri1EQTRER0MtOThOTQ==";
+    const APAYGC = "VGVzdF9hcGF5X2dpZnRfY2FyZA==";
     // ---------------------
 
     const SALT = "VigneshSarumathy_Wedding_2025";
