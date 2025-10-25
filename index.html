@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Gift For You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-page" class="page active">
+        <div class="background-image"></div>
+        <div class="overlay"></div>
+
+        <main class="content">
+            <header>
+                <h1 class="main-heading">
+                    Happy Married Life<br>
+                    Vignesh<span class="heart-symbol">❤</span>Sarumathy
+                </h1>
+                <p class="quote">"May your love be a timeless masterpiece, a beautiful story for all to read."</p>
+            </header>
+
+            <section class="contributors-section">
+                <div class="contributor-name contributor-left">Pugazhendhi K</div>
+                <div class="contributor-name contributor-right">Sri Murugan G</div>
+                <svg class="arrows" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid meet">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                            <polygon points="0 0, 8 4, 0 8" fill="#ffd700" />
+                        </marker>
+                        <filter id="neon-glow">
+                            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <path id="arrow-left" d="M 85,45 Q 125,110 165,175 Q 180,205 200,240" marker-end="url(#arrowhead)" />
+                    <path id="arrow-right" d="M 315,45 Q 275,110 235,175 Q 220,205 200,240" marker-end="url(#arrowhead)" />
+                </svg>
+            </section>
+
+            <section id="auth-section">
+                <div class="pointer-arrow pointer-arrow-left">⬇</div>
+                <div class="pointer-arrow pointer-arrow-right">⬇</div>
+                <input type="password" id="password-input" placeholder="Enter Access Code">
+                <button id="login-button">Reveal Gift</button>
+            </section>
+
+            <section id="gift-card-section" class="hidden">
+                <h2>Your Gift</h2>
+                <div class="pointer-arrow pointer-arrow-bottom" id="gift-arrow" style="display: none;">⬇</div>
+                <div id="scratch-card-container">
+                    <div class="gift-card-design">
+                        <p class="gift-card-brand">amazon pay</p>
+                        <p class="gift-card-value">₹1000</p>
+                    </div>
+                    <canvas id="scratch-canvas"></canvas>
+                </div>
+                <div id="gift-code-container" class="hidden">
+                    <p id="gift-code"></p>
+                    <button id="copy-button">Copy Code</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="golden-hearts-container" id="hearts-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
