@@ -18,7 +18,7 @@ def main():
     """Main function to get inputs and generate hashes."""
     print("--- Hash Generator for Wedding Gift App ---")
     
-    password = input("Enter the password to hash (e.g., VigneshSarumathy): ")
+    password = input("Enter the password to hash: ")
     gift_card_code = input("Enter the gift card code to encode: ")
     
     hashed_password = generate_password_hash(password)
