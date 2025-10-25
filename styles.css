@@ -68,12 +68,12 @@ body {
 
 /* Content container */
 .content {
-    padding: 2rem 1.5rem;
+    padding: 5rem 1.5rem;
     text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     z-index: 1;
 }
@@ -83,17 +83,7 @@ body {
     padding-top: 1rem;
 }
 
-/* Header section */
-header {
-    margin-bottom: 3rem;
-    opacity: 0;
-    animation: fadeInUp 1.2s ease-out 0.3s forwards;
-}
 
-.content.photo-page header {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-}
 
 .content.photo-page .main-heading,
 .content.photo-page .quote {
@@ -109,6 +99,8 @@ header {
     font-weight: 700;
     text-shadow: 2px 2px 20px rgba(0,0,0,0.8), 0 0 30px rgba(255,255,255,0.3);
     letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out 0.3s forwards;
 }
 
 .heart-symbol {
@@ -134,72 +126,15 @@ header {
     margin: 0 auto;
     line-height: 1.6;
     font-weight: 300;
+    margin-bottom: 2rem;
 }
 
-/* Contributors section */
-.contributors-section {
-    position: relative;
-    margin: 2rem 0 3rem 0;
-    height: 180px;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+.bottom-content {
     opacity: 0;
     animation: fadeInUp 1.2s ease-out 0.6s forwards;
 }
 
-.contributor-name {
-    font-size: clamp(1rem, 3.5vw, 1.3rem);
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.9);
-    letter-spacing: 0.5px;
-    position: absolute;
-    top: 10px;
-    z-index: 5;
-}
 
-.contributor-left {
-    left: 15px;
-}
-
-.contributor-right {
-    right: 15px;
-}
-
-.content.photo-page .contributor-name {
-    top: 20px;
-}
-
-.content.photo-page .contributor-left {
-    left: 20px;
-}
-
-.content.photo-page .contributor-right {
-    right: 20px;
-}
-
-.arrows {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-#arrow-left, #arrow-right {
-    stroke: #ffd700;
-    stroke-width: 3;
-    fill: none;
-    stroke-dasharray: 350;
-    stroke-dashoffset: 350;
-    animation: drawArrow 2.5s ease-out 1.5s forwards;
-    filter: url(#neon-glow) drop-shadow(0 0 8px rgba(255, 215, 0, 0.9)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.7)) drop-shadow(0 0 25px rgba(255, 215, 0, 0.5));
-}
-
-@keyframes drawArrow {
-    to { stroke-dashoffset: 0; }
-}
 
 /* Animated pointer arrows */
 .pointer-arrow {
@@ -284,16 +219,10 @@ header {
     position: relative;
 }
 
-#gift-card-section {
-    position: relative;
-}
-
 /* Auth section */
 #auth-section {
-    margin: 2rem auto;
+    margin: 0 auto;
     max-width: 350px;
-    opacity: 0;
-    animation: fadeInUp 1.2s ease-out 0.9s forwards;
     transition: all 0.5s ease;
 }
 
@@ -354,6 +283,7 @@ header {
     opacity: 0;
     display: none;
     margin-top: 1rem;
+    width:80% !important;
 }
 
 .content.photo-page #gift-card-section {
@@ -401,7 +331,7 @@ header {
 /* Scratch card */
 #scratch-card-container {
     position: relative;
-    width: 90%;
+    width: 90% !important;
     max-width: 300px;
     height: 180px;
     margin: 0 auto 1rem auto;
@@ -578,15 +508,13 @@ header {
 @media (max-width: 480px) {
     .content {
         padding: 1.5rem 1rem;
+}
     }
 
     header {
         margin-bottom: 2rem;
     }
 
-    .contributors-section {
-        margin: 1.5rem 0 2rem 0;
-    }
 
     #scratch-card-container {
         height: 160px;
@@ -612,17 +540,17 @@ header {
     }
 }
 
+.content.photo-page {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
 /* Ensure text is positioned at top on photo page */
 .content.photo-page header {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-.content.photo-page .contributors-section {
-    margin-bottom: 1.5rem;
-    height: 250px;
-    margin-top: 15vh;
-}
 
 .content.photo-page .main-heading {
     font-size: clamp(1.8rem, 6vw, 3rem);
